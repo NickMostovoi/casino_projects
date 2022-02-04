@@ -10,87 +10,70 @@
     height: 70px;
 }
 
-/************************************************************ header hamburger menu */
-.header__hamburgerMenu {
-    margin: 0;
+/************************************************************ header burger menu */
+.header__burger {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
 }
 
-#menu__toggle {
+.fn-burger__button_toggle {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+.burger__line1,
+.burger__line2,
+.burger__line3 {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    margin: 8px 0;
+    transition: 0.4s;
+}
+
+.burger__line1.change  {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.burger__line2.change  {
+    opacity: 0;
+}
+
+.burger__line3.change  {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.burger__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    width: 600px;
+    height: 100%;
+    padding: 100px 10px 0 60px;
+    background-color: #171717;
+    z-index: 2;
+}
+
+.burger__menu_hidden {
     display: none;
 }
 
-#menu__toggle:checked ~ .menu__btn > span {
-    transform: rotate(45deg);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-}
-
-#menu__toggle:checked ~ .menu__box {
-    visibility: visible;
-    left: 0;
-}
-
-.menu__btn {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 18px;
-    left: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: #fff;
-    transition-duration: 0.3s;
-}
-
-.menu__btn > span::before {
-    content: '';
-    top: -10px;
-}
-
-.menu__btn > span::after {
-    content: '';
-    top: 10px;
-}
-
-.menu__box {
-    position: fixed;
-    visibility: hidden;
-    overflow-y: auto;
-    left: -100%;
-    width: 500px;
-    height: 100%;
-    padding: 100px 10px 0 80px;
+.menu {
     list-style: none;
-    background-color: #171717;
-    transition-duration: 0.3s;
 }
 
-.menu__box .menu__logo {
+.menu__logo {
     position: absolute;
-    top: 5px;
-    left: 65px;
+    top: 15px;
+    left: 85px;
 }
 
-.menu__box .menu__item {
+.menu__item {
     display: block;
     padding: 17px 0;
     font-family: sans-serif;
@@ -101,11 +84,14 @@
 
 .menu__item:hover {
     color: #ed8b06;
+    transition-duration: 0.4s;
 }
 
 /************************************************************ header logo */
 .header__logo {
-    margin: 2px 0 0 70px;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .header__logo .logo__iconCasino {
@@ -135,6 +121,7 @@
 
 .menu__list .menu__link:hover {
     color: #ed8b06;
+    transition-duration: 0.4s;
 }
 
 .menu__link.menu__link_state_active {
@@ -146,7 +133,7 @@
 .header__buttons {
     display: flex;
     align-items: center;
-    margin: 0;
+    margin: 0 20px;
 }
 
 .button {
@@ -165,12 +152,139 @@
     background-color: #ed8b00;
 }
 
-.button.button_join {
+.button.button_registration {
     background-color: #6fb315;
 }
 
+/************************************************************ slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1920px;
+}
+
+.slider__wrapper {
+    overflow: hidden;
+}
+
+.slider__items {
+    display: flex;
+}
+
+.slider__item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.content__text {
+    position: absolute;
+    top: 176px;
+    left: 300px;
+    font-size: 65px;
+    color: #fff;
+}
+
+.content__button {
+    position: absolute;
+    top: 280px;
+    left: 300px;
+    height: 70px;
+    width: 300px;
+    text-align: center;
+    background-color: #6d9910;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.button_next {
+    position: absolute;
+    top: 180px;
+    right: 20px;
+    font-size: 50px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.button_previous {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    font-size: 50px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.paginations__indicators {
+    position: absolute;
+    z-index: 1;
+    left: 420px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.paginations__indicator {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.paginations__indicator_active {
+    background-color: #ed8b06;
+}
+
 /************************************************************ media */
-@media screen and (max-width: 1150px) {
+@media (max-width: 567px) {
+    .burger__menu {
+        width: 100%;
+    }
+
+    .header__buttons {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) {
+    .slider {
+        display: none;
+    }
+}
+
+@media (max-width: 1180px) {
+    .content__text {
+        top: 200px;
+        font-size: 45px;
+    }
+
+    .content__button {
+        height: 50px;
+        width: 200px;
+        font-size: 25px;
+    }
+
+    .paginations__indicators {
+        left: 320px;
+    }
+
+    .paginations__indicator {
+        width: 10px;
+        height: 10px;
+    }
+
     .header__logo .logo__logoTablet {
         display: none;
     }
@@ -189,15 +303,5 @@
 
     .menu__item .menu__link {
         font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .header__hamburgerMenu .menu__box {
-        width: 100%;
-    }
-
-    .header__buttons {
-        display: none;
     }
 }
