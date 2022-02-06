@@ -65,56 +65,60 @@
     </header>
 
     <main class="main">
-        <div class="main__slider">
-            <div class="slider">
-                <div class="slider__wrapper">
-                    <div class="slider__items">
-                        <div class="slider__item slider__item_active">
-                            <div class="slider__img">
-                                <a href="#">
-                                    <img src="img/slide1.jpg">
-                                </a>
-                            </div>
-                            <div class="slider__content">
-                                <div class="content">
-                                    <div class="content__text">100% up to $400!</div>
-                                    <button class="content__button">More info</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="slides__buttons">
-                    <button class="button button_next">&#8250;</button>
-                    <button class="button button_previous">&#8249;</button>
-                    <div class="paginations">
-                        <ol class="paginations__indicators">
-                            <li class="paginations__indicator paginations__indicator_active"></li>
-                            <li class="paginations__indicator"></li>
-                            <li class="paginations__indicator"></li>
-                            <li class="paginations__indicator"></li>
-                            <li class="paginations__indicator"></li>
-                        </ol>
-                    </div>
+        <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__item">
+                    <a class="slider__img" href="#">
+                        <img src="img/background.jpg">
+                    </a>
+<!--                    <div class="slider__content">-->
+<!--                        <div class="content">-->
+<!--                            <div class="content__text">100% up to $400!</div>-->
+<!--                            <button class="content__button">More info</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             </div>
+<!--            <div class="slider__buttons">-->
+<!--                <button class="button button_next">&#8250;</button>-->
+<!--                <button class="button button_previous">&#8249;</button>-->
+<!--                <div class="paginations">-->
+<!--                    <ol class="paginations__indicators">-->
+<!--                        <li class="paginations__indicator paginations__indicator_active"></li>-->
+<!--                        <li class="paginations__indicator"></li>-->
+<!--                        <li class="paginations__indicator"></li>-->
+<!--                        <li class="paginations__indicator"></li>-->
+<!--                        <li class="paginations__indicator"></li>-->
+<!--                    </ol>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
 
-        <div class="main__menu">
-            <ul class="gamesInfo">
-                <li><a class="gamesInfo__item gamesInfo__item_img1 gamesInfo__item_active" href="#">Top Games</a></li>
-                <li><a class="gamesInfo__item" href="#">Premium Casino</a></li>
-                <li><a class="gamesInfo__item" href="#">Live Casino</a></li>
-            </ul>
+        <div class="menu">
+            <div class="menu__gamesInfo">
+                <ul class="gamesNav">
+                    <li><a class="gamesNav__item gamesNav__item_topGamesImg" href="#">Top Games</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_premium gamesNav__item_active" href="#">Premium Casino</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_topGamesImg" href="#">Slots</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_premium" href="#">Daily</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_premium" href="#">Live Casino</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_topGamesImg" href="#">Megaways</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_premium" href="#">Premium Casino</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_topGamesImg" href="#">Jackpots</a></li>
+                    <li><a class="gamesNav__item gamesNav__item_premium" href="#">A - Z</a></li>
+                </ul>
 
-            <ul class="gamesFilters">
-                <li><a class="gamesFilters__item gamesFilters__item_active" href="#">ololo</a></li>
-                <li><a class="gamesFilters__item" href="#">ololo</a></li>
-                <li><a class="gamesFilters__item" href="#">ololo</a></li>
-            </ul>
+                <ul class="gamesFilters">
+                    <li><a class="gamesFilters__item gamesNav__item_topGamesImg" href="#">Sort</a></li>
+                    <li><a class="gamesFilters__item gamesNav__item_premium" href="#">Filter</a></li>
+                    <li>
+                        <span class="gamesFilters__item fn-gamesFilters__item_search" href="#">
+                            <input class="gamesFilters__itemInput" placeholder="Write here...">
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
-
     </main>
 
     <script src="index.js"></script>
