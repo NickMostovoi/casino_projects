@@ -457,6 +457,73 @@
     height: 100%;
 }
 /************************************************************ media */
+
+
+
+
+@media (max-width: 1180px) {
+    .menu__gamesInfo {
+        overflow-x: scroll;
+    }
+
+    .header__logo .logo__logoTablet {
+        display: none;
+    }
+
+    .header__logo .logo__iconCasino {
+        height: 55px;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .header__buttons .button {
+        width: 90px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .menu__item .menu__link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 960px) {
+    .header__menu {
+        overflow-x: scroll;
+    }
+
+    .header__buttons {
+        display: none;
+    }
+
+    .games {
+        display: block;
+    }
+
+    .games__itemMain {
+        width: 100%;
+        height: 850px;
+    }
+
+    .games__items {
+        width: 100%;
+        height: 100%;
+        margin-top: 5px;
+        overflow: visible;
+        justify-content: center;
+    }
+
+    .games__item {
+        width: 23%;
+        height: 200px;
+        margin: 5px;
+    }
+
+    .games__jackpotTitle {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 567px) {
     .burger__menu {
         width: 100%;
@@ -493,40 +560,5 @@
         transition-duration: 0.5s;
         transform: scale(1.05);
     }
-}
 
-@media (max-width: 960px) {
-    .header__menu {
-        overflow-x: scroll;
-    }
-
-    .header__buttons {
-        display: none;
-    }
-}
-
-@media (max-width: 1180px) {
-    .menu__gamesInfo {
-        overflow-x: scroll;
-    }
-
-    .header__logo .logo__logoTablet {
-        display: none;
-    }
-
-    .header__logo .logo__iconCasino {
-        height: 55px;
-        display: block;
-        margin-top: 5px;
-    }
-
-    .header__buttons .button {
-        width: 90px;
-        height: 40px;
-        font-size: 14px;
-    }
-
-    .menu__item .menu__link {
-        font-size: 12px;
-    }
 }
