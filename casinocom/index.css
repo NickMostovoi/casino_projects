@@ -248,7 +248,7 @@
     height: 70px;
     width: 100%;
     background: linear-gradient(#e7e7e7, #989898);
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .gamesNav,
@@ -287,7 +287,6 @@
 
 .fn-gamesFilters__item_search:hover {
     width: 350px;
-    /*transition-duration: 0.5s;*/
     background-position: 5% 50%;
     background-color: #ed8b06;
 }
@@ -296,14 +295,14 @@
     background-color: #fff;
 }
 
-.gamesNav__item_topGamesImg {
+.gamesNav__item_topGamesIcon {
     background-image: url("img/cup.png");
     background-size: 42px;
     background-repeat: no-repeat;
     background-position: 50% 20%;
 }
 
-.gamesNav__item_premium {
+.gamesNav__item_premiumIcon {
     background-image: url("img/diamond.png");
     background-size: 40px;
     background-repeat: no-repeat;
@@ -353,6 +352,10 @@
 }
 
 @media (max-width: 1180px) {
+    .menu__gamesInfo {
+        overflow-x: scroll;
+    }
+
     .header__logo .logo__logoTablet {
         display: none;
     }
