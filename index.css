@@ -606,19 +606,19 @@
     margin: 10px 0;
 }
 
-.footer__link {
+.footer__itemLink {
     font-family: sans-serif;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
 
-.footer__link:hover {
+.footer__itemLink:hover {
     text-decoration: underline;
 }
 
-.footer__link_appStoreIcon,
-.footer__link_playStoreIcon {
+.footer__itemLink_appStoreIcon,
+.footer__itemLink_playStoreIcon {
     display: block;
 }
 
