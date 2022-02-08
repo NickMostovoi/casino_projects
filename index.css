@@ -477,6 +477,7 @@
 .games__img_size_contain {
     height: 150%;
 }
+
 /************************************************************ footer */
 .footer__security {
     background-color: #e2e2e2;
@@ -494,15 +495,15 @@
 }
 
 .footer__icon {
-    width: 200px;
+    width: 50px;
     height: 70px;
     margin: 0 5px;
     cursor: pointer;
+    background-image: url("img/footer-sprite.png");
+    background-repeat: no-repeat;
 }
 
 .footer__icon_gambleAware {
-    background-image: url("img/footer-sprite.png");
-    background-repeat: no-repeat;
     background-position: 5% 55%;
     background-size: 760%;
     width: 150px;
@@ -513,27 +514,158 @@
 }
 
 .footer__icon_responsibleGaming {
-    background-image: url("img/footer-sprite.png");
-    background-repeat: no-repeat;
-    background-position: 19% 52%;
+    background-position: -333px -125px;
     background-size: 2615%;
     width: 70px;
 }
 
 .footer__icon_responsibleGaming:hover {
-    background-position: 19% 94%;
+    background-position: -333px -225px;
 }
 
 .footer__icon_thawte {
-    background-image: url("img/footer-sprite.png");
-    background-repeat: no-repeat;
-    background-position: 26% 53%;
+    background-position: -305px -82px;
     background-size: 800%;
     width: 165px;
 }
 
 .footer__icon_thawte:hover {
-    background-position: 26% 100%;
+    background-position: -305px -154px;
+}
+
+.footer__payments {
+    background-color: #000000;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer__icon_sofort {
+    background-position: -412px -5px;
+    background-size: 1150%;
+    width: 130px;
+    height: 50px;
+}
+
+.footer__icon_sofort:hover {
+    background-position: -412px -50px;
+}
+
+.footer__icon_masterCard {
+    background-position: -1375px -12px;
+    background-size: 1950%;
+    width: 100px;
+    height: 50px;
+}
+
+.footer__icon_masterCard:hover {
+    background-position: -1375px -70px;
+}
+
+.footer__icon_skrill {
+    background-position: -1146px -9px;
+    background-size: 1370%;
+    width: 130px;
+    height: 50px;
+}
+
+.footer__icon_skrill:hover {
+    background-position: -1146px -62px;
+}
+
+.footer__navigation {
+    background-color: #171717;
+    width: 100%;
+}
+
+.footer__columns {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__column {
+    min-width: 18%;
+    margin: 10px;
+}
+
+.footer__column h3 {
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 10px 0;
+    color: #ed8b06;
+    border-bottom: 1px solid #ed8b06;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__list li {
+    margin: 10px 0;
+}
+
+.footer__list li a{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.footer__list a:hover {
+    text-decoration: underline;
+}
+
+.footer__description {
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    color: #626262;
+    padding: 20px;
+}
+
+.footer__title {
+    width: 70%;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.footer__title p {
+    font-family: sans-serif;
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+.footer__title a {
+    color: #626262;
+}
+
+.footer__language {
+    background-color: #000;
+}
+
+.language {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    width: 500px;
+}
+
+.language__title {
+    font-family: sans-serif;
+    font-size: 25px;
+    margin-right: 15px;
+    color: #fff;
+}
+
+.language__list {
+    margin-left: 0;
+    width: 150px;
+    height: 50px;
+    font-family: sans-serif;
+    font-size: 25px;
 }
 
 /************************************************************ media */
@@ -562,8 +694,17 @@
         font-size: 12px;
     }
 
+    .footer__payments,
     .footer__security {
         overflow: scroll;
+    }
+
+    .footer__columns {
+        flex-wrap: wrap;
+    }
+
+    .footer__column {
+        min-width: 30%;
     }
 }
 
@@ -615,6 +756,11 @@
     .games__itemMain_size {
         height: 600px;
     }
+
+    .language {
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 @media (max-width: 567px) {
@@ -663,5 +809,9 @@
     .games__itemMain_size {
         height: 400px;
         min-width: 360px;
+    }
+
+    .footer__column {
+        min-width: 90%;
     }
 }
