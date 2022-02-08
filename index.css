@@ -602,19 +602,24 @@
     padding: 0;
 }
 
-.footer__list li {
+.footer__item {
     margin: 10px 0;
 }
 
-.footer__list li a{
+.footer__link {
     font-family: sans-serif;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
 }
 
-.footer__list a:hover {
+.footer__link:hover {
     text-decoration: underline;
+}
+
+.footer__link_appStoreIcon,
+.footer__link_playStoreIcon {
+    display: block;
 }
 
 .footer__description {
